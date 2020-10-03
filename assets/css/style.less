@@ -1,12 +1,15 @@
+@yellow: #e8c300;
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
   margin: 0;
+  box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oranienbaum', serif;
+  line-height: 84px;
 }
 .container {
   max-width: 1280px;
@@ -43,12 +46,145 @@ h1, h2, h3, h4, h5, h6 {
     .nav-first a {
         margin-left: 49px;
         margin-right: 43px;
-      }
-      .nav-second a{
+    }
+    .nav-second a{
         margin-right: 39px;
         margin-left: 46px;
+    }
+  }
+
+  .header-main {
+    display: flex;
+    padding-top: 150px;
+    height: 250px;
+    .work-schedule {
+      font-size: 12px;
+      line-height: 12px;
+      transform: rotate(-90deg);
+      text-transform: none;
+    }
+    .header-middle {
+      text-align: center;
+      margin-left: 57px;
+      margin-top: 1px;
+      position: relative;
+      .pre-title {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 6px;
+      }
+      .title {
+        font-size: 96px;
+        letter-spacing: 3px;
+        margin-top: 24px;
+        margin-bottom: 64px;
+        position: relative;
+      }
+      .title::after {
+        content: "";
+        width: 60px;
+        height: 5px;
+        background-color: @yellow;
+        border-radius: 50px;
+        position: absolute;
+        top: 111px;
+        left: 300px;
+      }
+      .btn {
+        width: 200px;
+        height: 60px;
+        background-color: @yellow;
+        border: none;
+        border-radius: 5px;
+        margin-right: 22px;
+        margin-left: 14px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .btn-explore {
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+    .social {
+      margin-left: 237px;
+      margin-top: 14px;
+      .social-icon {
+        width: 60px;
+        height: 60px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        margin-bottom: 17px;
+      }
+      .fb-icon {
+        background: url("../img/header/fb-icon.png") no-repeat 50% 50%;
+      }
+      .tw-icon {
+        background: url("../img/header/tw-icon.png") no-repeat 50% 50%;
+      }
+      .in-icon {
+        background: url("../img/header/in-icon.png") no-repeat 50% 50%;
       }
     }
 
+  } /* Header Main */
 
-}
+  .outline-btn {
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 80px;
+    position: relative;
+    .scroll-down-btn {
+      width: 40px;
+      height: 40px;
+      background: #ffffff url("../img/header/button-arrow.png") no-repeat 50% 50%;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+  }
+  .header-middle::before {
+    content: "";
+    width: 1px;
+    height: 699px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: -226px;
+    left: -95px;
+  }
+  .header-middle::after {
+    content: "";
+    width: 1px;
+    height: 699px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: -226px;
+    right: -84px;
+  }
+  .outline-btn::before {
+    content: "";
+    width: 1px;
+    height: 454px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 61px;
+    left: 29px;
+  }
+  .outline-btn::after {
+    content: "";
+    width: 1px;
+    height: 82px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 61px;
+    left: 29px;
+  }
+
+} /* Header */
