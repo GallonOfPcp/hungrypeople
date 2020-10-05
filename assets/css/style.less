@@ -9,16 +9,23 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oranienbaum', serif;
-  line-height: 84px;
+  text-transform: uppercase;
+  margin: 0;
+}
+p {
+  margin: 0;
 }
 .container {
   max-width: 1280px;
   margin: 0 auto;
 }
 
+
+ /* Header */
+
 .header {
   height: 800px;
-  background-image: url("../img/header/header-bg.jpg");
+  background-image: url("../img/header/header-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
@@ -29,6 +36,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     margin-top: 42px;
     font-size: 12px;
+    transition: color 0.2s;
+  }
+  a:hover {
+    color: @yellow;
+  }
+  a:active {
+    color: #ba9f0c;
   }
   .header-logo {
     margin-top: 25px;
@@ -71,13 +85,14 @@ h1, h2, h3, h4, h5, h6 {
       .pre-title {
         font-size: 12px;
         line-height: 14px;
-        letter-spacing: 6px;
+        letter-spacing: 0.5em;
       }
       .title {
         font-size: 96px;
+        line-height: 84px;
         letter-spacing: 3px;
         margin-top: 24px;
-        margin-bottom: 64px;
+        margin-bottom: 62px;
         position: relative;
       }
       .title::after {
@@ -93,8 +108,8 @@ h1, h2, h3, h4, h5, h6 {
       .btn {
         width: 200px;
         height: 60px;
-        background-color: @yellow;
-        border: none;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 5px;
         margin-right: 22px;
         margin-left: 14px;
@@ -104,10 +119,12 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 20px;
         font-weight: 700;
         font-family: 'Open Sans', sans-serif;
+        transition: all 0.2s;
+        cursor: pointer;
       }
-      .btn-explore {
-        background-color: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+      .btn:hover {
+        background-color: @yellow;
+        border: none;
       }
     }
     .social {
@@ -119,6 +136,11 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 50%;
         margin-bottom: 17px;
+        transition: border 0.2s;
+        cursor: pointer;
+      }
+      .social-icon:hover {
+        border: 1px solid @yellow;
       }
       .fb-icon {
         background: url("../img/header/fb-icon.png") no-repeat 50% 50%;
@@ -141,6 +163,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     margin-top: 80px;
     position: relative;
+    cursor: pointer;
+    transition: border 0.2s;
     .scroll-down-btn {
       width: 40px;
       height: 40px;
@@ -149,6 +173,9 @@ h1, h2, h3, h4, h5, h6 {
       margin: 0 auto;
       margin-top: 10px;
     }
+  }
+  .outline-btn:hover {
+    border: 1px solid @yellow;
   }
   .header-middle::before {
     content: "";
@@ -186,5 +213,107 @@ h1, h2, h3, h4, h5, h6 {
     top: 61px;
     left: 29px;
   }
+}/* Header */
 
-} /* Header */
+
+
+
+ /* Main Block */
+
+.main-block {
+  height: 675px;
+  .mini-logo {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.5em;
+    text-align: center;
+    padding-top: 43px;
+  }
+  .main-block-info-left,
+  .main-block-info-right {
+    width: 600px;
+    text-align: center;
+    margin-top: 213px;
+  }
+  .main-block-info-right {
+    margin-right: 21px;
+  }
+  .main-block-title {
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 29px;
+    letter-spacing: 3px;
+  }
+  .main-block-pre-text {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 19px;
+  }
+  .main-block-text {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .main-block-info-left,
+  .main-block-border-element-left {
+    float: left;
+  }
+  .main-block-info-right,
+  .main-block-border-element-right {
+    float: right;
+  }
+  .main-block-border-element-right,
+  .main-block-border-element-left{
+    width: 210px;
+    height: 210px;
+    border: 20px solid @yellow;
+    border-radius: 5px;
+    margin-top: 212px;
+    position: relative;
+    z-index: 100;
+  }
+  .main-block-border-element-right{
+    .main-block-img {
+      position: absolute;
+      bottom: -182px;
+      right: 54px;
+      z-index: 0;
+    }
+  }
+  .main-block-border-element-left{
+    .main-block-img {
+      position: absolute;
+      bottom: -182px;
+      left: 43px;
+      z-index: 0;
+    }
+  }
+}/* Main Block */
+.main-block-second,
+.main-block-fourth,
+.main-block-sixth {
+  color: rgba(255, 255, 255, 0.9);
+  .main-block-info-right {
+    margin-top: 157px;
+  }
+  .main-block-border-element-left {
+    margin-top: 155px;
+  }
+}
+.main-block-second {
+  background-image: url("../img/main/master-chef-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-block-fourth {
+  background-image: url("../img/main/specialty-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
