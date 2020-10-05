@@ -235,10 +235,6 @@ p {
   .main-block-info-right {
     width: 600px;
     text-align: center;
-    margin-top: 213px;
-  }
-  .main-block-info-right {
-    margin-right: 21px;
   }
   .main-block-title {
     font-size: 36px;
@@ -270,47 +266,107 @@ p {
     height: 210px;
     border: 20px solid @yellow;
     border-radius: 5px;
-    margin-top: 212px;
     position: relative;
-    z-index: 100;
   }
-  .main-block-border-element-right{
-    .main-block-img {
-      position: absolute;
-      bottom: -182px;
-      right: 54px;
-      z-index: 0;
-    }
-  }
-  .main-block-border-element-left{
-    .main-block-img {
-      position: absolute;
-      bottom: -182px;
-      left: 43px;
-      z-index: 0;
-    }
+  .main-block-img {
+    z-index: -1;
   }
 }/* Main Block */
 .main-block-second,
 .main-block-fourth,
 .main-block-sixth {
   color: rgba(255, 255, 255, 0.9);
-  .main-block-info-right {
-    margin-top: 157px;
+}
+.main-block-first {
+  .main-block-border-element-right{
+
+    margin-top: 213px;
+    .main-block-img {
+      position: absolute;
+      bottom: -182px;
+      right: 54px;
+    }
   }
-  .main-block-border-element-left {
-    margin-top: 155px;
+  .main-block-info-left {
+    margin-top: 214px;
   }
 }
+
+
 .main-block-second {
   background-image: url("../img/main/master-chef-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.99;
+  .main-block-border-element-left {
+
+    margin-top: 156px;
+
+    .main-block-img {
+      position: absolute;
+      bottom: -182px;
+      left: 43px;
+    }
+  }
+
+  .main-block-info-right {
+    margin-top: 158px;
+    margin-right: 21px;
+  }
+
+}
+
+
+.main-block-third {
+  height: 575px;
+
+  .main-block-border-element-right{
+    width: 186px;
+    height: 186px;
+    margin-top: 224px;
+    .main-block-img {
+      position: absolute;
+      bottom: -195px;
+      right: 43px;
+    }
+
+  }
+  .main-block-info-left {
+    margin-top: 213px;
+  }
+}
+.schedule-phone {
+  height: 56px;
+  text-align: center;
+  padding-top: 45px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 0.5);
 }
 .main-block-fourth {
   background-image: url("../img/main/specialty-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.99;
+
+  .main-block-border-element-left {
+
+    width: 221px;
+    height: 221px;
+    margin-top: 150px;
+
+    .main-block-img {
+      position: absolute;
+      bottom: -177px;
+      left: 56px;
+    }
+
+  }
+  .main-block-info-right {
+    margin-top: 158px;
+    margin-right: 0;
+  }
 }
 .clearfix::after {
   content: "";
