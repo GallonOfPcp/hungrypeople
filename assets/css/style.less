@@ -215,7 +215,34 @@ p {
   }
 }/* Header */
 
-
+.scroll-btn {
+  width: 70px;
+  height: 70px;
+  background-color: @yellow;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  .scroll-btn-arrow {
+    width: 30px;
+    height: 30px;
+    border-left: 5px solid rgba(0, 0, 0, 0.9);
+    border-top: 5px solid rgba(0, 0, 0, 0.9);
+    transform: rotate(45deg);
+    border-radius: 2px;
+    margin: 0 auto;
+    margin-top: 26px;
+  }
+}
+.visible {
+  visibility: visible;
+  opacity: 0.8;
+}
 
 
  /* Main Block */
