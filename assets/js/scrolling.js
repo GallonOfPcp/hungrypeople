@@ -14,3 +14,12 @@ window.onscroll = function () {
     scrollBtn.classList.remove('visible')
   }
 };
+
+let outlineBtn = document.querySelector('.outline-btn');
+
+outlineBtn.onclick = function () {
+  window.scrollTo ({
+    top: 1875,
+    behavior: "smooth"
+  });
+};

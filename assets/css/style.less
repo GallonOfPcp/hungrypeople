@@ -17,6 +17,11 @@ p {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  overflow: hidden;
+  height: 100%;
+}
+.main-block-container {
+  height: 100%;
 }
 .btn {
   width: 200px;
@@ -474,7 +479,6 @@ p {
     margin-left: 12px;
   }
   .main-block-border-element-left {
-
     width: 212px;
     height: 221px;
     margin-top: 150px;
@@ -483,14 +487,22 @@ p {
       bottom: -177px;
       left: 56px;
     }
-
   }
   .main-block-info-right {
     margin-top: 158px;
     margin-right: 0;
   }
+  .slider-container {
+    display: flex;
+    transform: translate(-1280px);
+    transition: transform 1s;
+    .main-block-slider {
+      min-width: 1280px;
+    }
+
+  }
   .slider-buttons {
-    width: 70px;
+    width: 80px;
     margin: 0 auto;
     margin-top: 148px;
     .slider-button {
